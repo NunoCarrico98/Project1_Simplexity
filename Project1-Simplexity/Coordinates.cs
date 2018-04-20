@@ -8,13 +8,13 @@ namespace Project1_Simplexity
 {
     class Coordinates
     {
-        private int x;
-        private int y;
+        public int X { get;}
+        public int Y { get;}
 
         public Coordinates(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
     }
 }

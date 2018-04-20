@@ -8,11 +8,17 @@ namespace Project1_Simplexity
 {
     class Board
     {
-        private State[,] state;
+        private Piece[,] piece;
 
         public Board()
         {
-            state = new State[7, 7];
+            piece= new Piece[7, 7];
+            
+        }
+
+        public Piece GetPiece (Coordinates coordinates)
+        {
+           return piece[coordinates.X, coordinates.Y];
         }
     }
 }
