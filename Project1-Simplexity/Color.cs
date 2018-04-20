@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project1_Simplexity
 {
-    class Color
+    enum Color 
     {
+        None , Red, White
     }
 }

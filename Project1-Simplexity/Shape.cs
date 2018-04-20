@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project1_Simplexity
 {
-    class Shape
+    enum Shape
     {
+        None, Cilinder, Cube 
     }
 }
