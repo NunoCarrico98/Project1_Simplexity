@@ -21,7 +21,7 @@ namespace Project1_Simplexity
                     Coordinates coordinates = new Coordinates(i, j);
                     gamesymbols[i, j] = DefineGameSymbol(board.GetPiece(coordinates));
 
-                    Console.Write(gamesymbols[i, j]);
+                    Console.Write($" {gamesymbols[i, j]}  ");
                 }
                 Console.WriteLine();
             }
@@ -34,16 +34,16 @@ namespace Project1_Simplexity
             switch (piece)
             {
                 case Piece.RedCube:
-                    temp = "R";
+                    temp = " R ";
                     break;
                 case Piece.WhiteCube:
-                    temp = "W";
+                    temp = " W ";
                     break;
                 case Piece.RedCilinder:
-                    temp = "r";
+                    temp = " r ";
                     break;
                 case Piece.WhiteCilinder:
-                    temp = "w";
+                    temp = " w ";
                     break;
                 default:
                     temp = "|";

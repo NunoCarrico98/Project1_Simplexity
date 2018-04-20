@@ -19,5 +19,18 @@ namespace Project1_Simplexity
         {
             return piece[coordinates.X, coordinates.Y];
         }
+
+        public void SetPiece(int chosenColumn, Piece newPiece)
+        {
+            int checkX = 6;
+
+            while (piece[checkX,chosenColumn] != Piece.None)
+            {
+                checkX--;
+            }
+
+            piece[checkX, chosenColumn] = newPiece;
+
+        }
     }
 }
