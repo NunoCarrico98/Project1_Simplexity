@@ -8,6 +8,6 @@ namespace Project1_Simplexity
 {
     enum Piece
     {
-        None, RedCube, WhiteCube, RedCilinder, WhiteCIlinder
+        None, RedCube, WhiteCube, RedCilinder, WhiteCilinder
     }
 }
