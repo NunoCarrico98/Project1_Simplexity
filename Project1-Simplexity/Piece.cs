@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project1_Simplexity
 {
-    class Piece
+    enum Piece
     {
-        public Color Color { get;}
-        public Shape Shape { get;}
-
-        public Piece (Color color, Shape shape)
-        {
-            this.Color = color;
-            this.Shape = shape;
-        }
+        None, RedCube, WhiteCube, RedCilinder, WhiteCIlinder
     }
 }

@@ -10,6 +10,11 @@ namespace Project1_Simplexity
     {
         static void Main(string[] args)
         {
+            Board board = new Board();
+            Renderer render = new Renderer();
+
+            render.Render(board); 
+
         }
     }
 }

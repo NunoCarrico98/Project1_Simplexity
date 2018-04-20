@@ -12,13 +12,12 @@ namespace Project1_Simplexity
 
         public Board()
         {
-            piece= new Piece[7, 7];
-            
+            piece = new Piece[7, 7];
         }
 
-        public Piece GetPiece (Coordinates coordinates)
+        public Piece GetPiece(Coordinates coordinates)
         {
-           return piece[coordinates.X, coordinates.Y];
+            return piece[coordinates.X, coordinates.Y];
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Project1_Simplexity
 {
     class Coordinates
     {
-        public int X { get;}
-        public int Y { get;}
+        public int X { get; }
+        public int Y { get; }
 
         public Coordinates(int x, int y)
         {
