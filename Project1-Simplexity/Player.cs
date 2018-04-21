@@ -37,6 +37,7 @@ namespace Project1_Simplexity
 
             Console.Write("Insert column: ");
             read = Console.ReadLine();
+            Console.WriteLine();
             move = Convert.ToInt32(read);
 
             while (move > 7 || move < 1)
@@ -44,6 +45,7 @@ namespace Project1_Simplexity
                 Console.WriteLine("Invalid Input!");
                 Console.Write("Insert column: ");
                 read = Console.ReadLine();
+                Console.WriteLine();
                 move = Convert.ToInt32(read);
             }
 
