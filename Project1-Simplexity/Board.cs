@@ -20,6 +20,20 @@ namespace Project1_Simplexity
             return piece[coordinates.X, coordinates.Y];
         }
 
+        public Shape GetShape(Coordinates coordinates)
+        {
+            if (GetPiece(coordinates) == Piece.RedCube || GetPiece(coordinates) == Piece.WhiteCube) return Shape.Cube;
+            if (GetPiece(coordinates) == Piece.RedCilinder || GetPiece(coordinates) == Piece.WhiteCilinder) return Shape.Cilinder;
+            else return Shape.None;
+        }
+
+        public Color GetColor(Coordinates coordinates)
+        {
+            if (GetPiece(coordinates) == Piece.RedCube || GetPiece(coordinates) == Piece.RedCilinder) return Color.Red;
+            if (GetPiece(coordinates) == Piece.WhiteCube || GetPiece(coordinates) == Piece.WhiteCilinder) return Color.White;
+            else return Color.None;
+        }
+
         public void SetPiece(int playerMove, Piece newPiece)
         {
             int checkX = 6;
