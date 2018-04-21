@@ -12,7 +12,8 @@ namespace Project1_Simplexity
         {
             Board board = new Board();
             Renderer render = new Renderer();
-
+            Player player = new Player(Color.White);
+            board.SetPiece(player.GetColumn(), player.GetShape());
             render.Render(board); 
 
         }

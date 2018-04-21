@@ -20,9 +20,10 @@ namespace Project1_Simplexity
             return piece[coordinates.X, coordinates.Y];
         }
 
-        public void SetPiece(int chosenColumn, Piece newPiece)
+        public void SetPiece(int playerMove, Piece newPiece)
         {
             int checkX = 6;
+            int chosenColumn = playerMove - 1;
 
             while (piece[checkX,chosenColumn] != Piece.None)
             {
