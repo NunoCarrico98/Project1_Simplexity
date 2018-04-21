@@ -18,11 +18,12 @@ namespace Project1_Simplexity
 
             do
             {
-                Color color = player1.Color;
+                int column = 0;
+                Piece playerPiece = Piece.None;
 
                 render.Render(board);
 
-                if (color == player1.Color)
+                if (board.NextPlayer == player1.Color)
                 {
                     if (!player1.HavePieces())
                     {
@@ -30,13 +31,11 @@ namespace Project1_Simplexity
                         continue;
                     }
                     Console.WriteLine("White Player, it's your turn!\n");
-                    lastPosPlayed = board.SetPiece(player1.GetColumn(), player1.GetShape());
-                    color = player2.Color;
+                    column = player1.GetColumn();
+                    playerPiece = player1.GetShape();
                 }
 
-                render.Render(board);
-
-                if (color == player2.Color)
+                if (board.NextPlayer == player2.Color)
                 {
                     if (!player2.HavePieces())
                     {
@@ -44,9 +43,11 @@ namespace Project1_Simplexity
                         continue;
                     }
                     Console.WriteLine("Red Player, it's your turn!\n");
-                    lastPosPlayed = board.SetPiece(player2.GetColumn(), player2.GetShape());
-                    color = player1.Color;
+                    column = player2.GetColumn();
+                    playerPiece = player2.GetShape();
                 }
+
+                lastPosPlayed = board.SetPiece(column, playerPiece);
 
             } while (!winChecker.CheckDraw(player1, player2) && winChecker.Check(board, lastPosPlayed) == Color.None);
 

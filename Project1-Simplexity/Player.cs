@@ -38,6 +38,7 @@ namespace Project1_Simplexity
             Console.WriteLine("Insert column:");
             read = Console.ReadLine();
             move = Convert.ToInt32(read);
+
             while (move > 7 || move < 1)
             {
                 Console.WriteLine("Insert column:");
@@ -54,9 +55,6 @@ namespace Project1_Simplexity
             Console.WriteLine("What Shape do you want to play? 1:Cube  2:Cilinder");
             read = Console.ReadLine();
             return GetPlayerPiece(read); 
-           
-
-
         }
 
         public Piece GetPlayerPiece(string read)

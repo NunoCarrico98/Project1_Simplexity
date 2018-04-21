@@ -10,9 +10,12 @@ namespace Project1_Simplexity
     {
         private Piece[,] piece;
 
+        public Color NextPlayer { get; private set; }
+
         public Board()
         {
             piece = new Piece[7, 7];
+            NextPlayer = Color.White;
         }
 
         public Piece GetPiece(Coordinates coordinates)
@@ -23,14 +26,14 @@ namespace Project1_Simplexity
         public Shape GetShape(Coordinates coordinates)
         {
             if (GetPiece(coordinates) == Piece.RedCube || GetPiece(coordinates) == Piece.WhiteCube) return Shape.Cube;
-            if (GetPiece(coordinates) == Piece.RedCilinder || GetPiece(coordinates) == Piece.WhiteCilinder) return Shape.Cilinder;
+            else if (GetPiece(coordinates) == Piece.RedCilinder || GetPiece(coordinates) == Piece.WhiteCilinder) return Shape.Cilinder;
             else return Shape.None;
         }
 
         public Color GetColor(Coordinates coordinates)
         {
             if (GetPiece(coordinates) == Piece.RedCube || GetPiece(coordinates) == Piece.RedCilinder) return Color.Red;
-            if (GetPiece(coordinates) == Piece.WhiteCube || GetPiece(coordinates) == Piece.WhiteCilinder) return Color.White;
+            else if (GetPiece(coordinates) == Piece.WhiteCube || GetPiece(coordinates) == Piece.WhiteCilinder) return Color.White;
             else return Color.None;
         }
 
@@ -39,10 +42,10 @@ namespace Project1_Simplexity
             int checkX = 6;
             int chosenColumn = playerMove - 1;
 
-            while (piece[checkX,chosenColumn] != Piece.None)
+            while (piece[checkX, chosenColumn] != Piece.None)
             {
                 checkX--;
-                if(checkX < 0) 
+                if (checkX < 0)
                 {
                     Player CheckInput = new Player();
                     chosenColumn = CheckInput.GetColumn() - 1;
@@ -52,7 +55,21 @@ namespace Project1_Simplexity
 
             piece[checkX, chosenColumn] = newPiece;
 
+            SwitchTurn();
+
             return new Coordinates(checkX, chosenColumn);
+        }
+
+        public void SwitchTurn()
+        {
+            if (NextPlayer == Color.White)
+            {
+                NextPlayer = Color.Red;
+            }
+            else
+            {
+                NextPlayer = Color.White;
+            }
         }
     }
 }
