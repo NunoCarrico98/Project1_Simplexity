@@ -8,13 +8,14 @@ namespace Project1_Simplexity
 {
     class WinChecker
     {
-        public Color Check(Board board)
+        public Color Check(Board board, Coordinates lastPosPlayed)
         {
-            CheckForWinShape(board, Shape.Cube);
+            if(CheckForWinShape(board, lastPosPlayed, Shape.Cube)) return Color.Red;
+            else if(CheckForWinShape(board, lastPosPlayed, Shape.Cilinder)) return Color.Red;
 
         }
 
-        public CheckForWinShape(Board board, Coordinates lastPosPlayed, Shape shape)
+        public bool CheckForWinShape(Board board, Coordinates lastPosPlayed, Shape shape)
         {
             Coordinates[] directionCheck = new Coordinates[4];
             directionCheck[0] = new Coordinates(0, -1);
@@ -24,6 +25,8 @@ namespace Project1_Simplexity
 
             foreach(Coordinates direction in directionCheck)
             {
+                int matchingShapes = 1;
+
                 for (int dirUpDown = -1; dirUpDown <= 1; dirUpDown += 2)
                 {
                     Coordinates DirCheck = new Coordinates(direction.X * dirUpDown, direction.Y * dirUpDown);
@@ -34,10 +37,28 @@ namespace Project1_Simplexity
                         int yCheck = lastPosPlayed.Y + DirCheck.Y * checkDistance;
                         Coordinates coordCheck = new Coordinates(xCheck, yCheck);
 
-                        
+                        if (IsOutsideBoard(coordCheck)) break;
+
+                        if (board.GetShape(coordCheck) == shape)
+                        {
+                            matchingShapes++;
+                        }
+                        else break;
+                    }
+
+                    if (matchingShapes >= 4)
+                    {
+                        return true;
                     }
                 }
             }
+            return false;
+        }
+
+        public bool IsOutsideBoard(Coordinates coordinates)
+        {
+            if (coordinates.X < 0 || coordinates.Y < 0 || coordinates.X > 6 || coordinates.Y > 6) return true;
+            else return false;
         }
 
         public bool CheckDraw(Player player1, Player player2)

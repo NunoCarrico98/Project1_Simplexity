@@ -51,6 +51,7 @@
     <Compile Include="Renderer.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Piece.cs" />
+    <Compile Include="WinChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

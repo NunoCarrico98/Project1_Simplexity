@@ -14,6 +14,7 @@ namespace Project1_Simplexity
             Renderer render = new Renderer();
             Player player = new Player(Color.White);
             Player player2 = new Player(Color.Red);
+
             for (int i = 0; i < 50; i++)
             {   
                 Color color = Color.White;
