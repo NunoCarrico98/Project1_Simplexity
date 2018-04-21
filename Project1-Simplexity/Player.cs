@@ -24,6 +24,12 @@ namespace Project1_Simplexity
             this.CilinderNumber = 10;
         }
 
+        public bool HavePieces()
+        {
+            if (CubeNumber > 0 && CilinderNumber > 0) return true;
+            else return false;
+        }
+
         public int GetColumn()
         {
             string read = "";
