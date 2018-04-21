@@ -46,7 +46,7 @@ namespace Project1_Simplexity
                     temp = " w ";
                     break;
                 default:
-                    temp = "|";
+                    temp = " | ";
                     break;
 
             }
