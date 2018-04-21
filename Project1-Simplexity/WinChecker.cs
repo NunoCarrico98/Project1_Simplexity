@@ -15,7 +15,6 @@ namespace Project1_Simplexity
             if (CheckForWinColor(board, lastPosPlayed, Color.Red)) return Color.Red;
             if (CheckForWinColor(board, lastPosPlayed, Color.White)) return Color.White;
             return Color.None;
-
         }
 
         private bool CheckForWinShape(Board board, Coordinates lastPosPlayed, Shape shape)
@@ -48,11 +47,11 @@ namespace Project1_Simplexity
                             matchingShapes++;
                         }
                         else break;
-                    }
 
-                    if (matchingShapes >= 4)
-                    {
-                        return true;
+                        if (matchingShapes >= 4)
+                        {
+                            return true;
+                        }
                     }
                 }
             }
@@ -89,11 +88,11 @@ namespace Project1_Simplexity
                             matchingColors++;
                         }
                         else break;
-                    }
 
-                    if (matchingColors >= 6)
-                    {
-                        return true;
+                        if (matchingColors >= 6)
+                        {
+                            return true;
+                        }
                     }
                 }
             }
