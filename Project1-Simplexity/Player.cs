@@ -35,16 +35,18 @@ namespace Project1_Simplexity
             string read = "";
             int move = 0;
 
-            Console.WriteLine("Insert column:");
+            Console.Write("Insert column: ");
             read = Console.ReadLine();
             move = Convert.ToInt32(read);
 
             while (move > 7 || move < 1)
             {
-                Console.WriteLine("Insert column:");
+                Console.WriteLine("Invalid Input!");
+                Console.Write("Insert column: ");
                 read = Console.ReadLine();
                 move = Convert.ToInt32(read);
             }
+
             return move;
         }
 
@@ -52,8 +54,12 @@ namespace Project1_Simplexity
         {
             string read = "";
 
-            Console.WriteLine("What Shape do you want to play? 1:Cube  2:Cilinder");
+            Console.WriteLine("What shape do you want to play?");
+            Console.WriteLine($"1 - Cube({CubeNumber})\n2 - Cilinder({CilinderNumber})");
+            Console.Write("Shape: ");
             read = Console.ReadLine();
+            Console.WriteLine();
+
             return GetPlayerPiece(read); 
         }
 
@@ -61,12 +67,12 @@ namespace Project1_Simplexity
         {
             Piece playerPiece = Piece.None; 
 
-
             switch (read) 
             {
                 case "1":
                     if (CubeNumber == 0)
                     {
+                        Console.WriteLine("No Cubes left");
                         playerPiece = GetShape();
                     }
                     else
@@ -83,10 +89,10 @@ namespace Project1_Simplexity
                         }
                     }
                     break;
-
                 case "2":
                     if (CilinderNumber == 0)
                     {
+                        Console.WriteLine("No Cilinders left");
                         playerPiece = GetShape();
                     }
                     else
@@ -104,14 +110,11 @@ namespace Project1_Simplexity
                     }
                     break;
                 default:
+                    Console.WriteLine("Invalid Input");
                     playerPiece = GetShape();
-                    break;                   
-                    
+                    break;                                       
             }
             return playerPiece;
-
         }
-
-
     }
 }

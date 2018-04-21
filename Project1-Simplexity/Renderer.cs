@@ -25,6 +25,15 @@ namespace Project1_Simplexity
                 }
                 Console.WriteLine();
             }
+
+            Console.WriteLine();
+
+            for (int i = 1; i < 8; i++)
+            {
+                Console.Write($"  {i}   ");
+            }
+
+            Console.WriteLine("\n");
         }
 
         public string DefineGameSymbol(Piece piece)
