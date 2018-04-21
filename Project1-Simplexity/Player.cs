@@ -10,9 +10,18 @@ namespace Project1_Simplexity
     {
         public Color Color { get; }
 
+        public int CubeNumber { get; private set; }
+        public int CilinderNumber { get; private set; }
+        
+        public Player()
+        {
+        }
+        
         public Player (Color color)
         {
             this.Color = color;
+            this.CubeNumber = 11;
+            this.CilinderNumber = 10;
         }
 
         public int GetColumn()
@@ -23,6 +32,12 @@ namespace Project1_Simplexity
             Console.WriteLine("Insert column:");
             read = Console.ReadLine();
             move = Convert.ToInt32(read);
+            while (move > 7 || move < 1)
+            {
+                Console.WriteLine("Insert column:");
+                read = Console.ReadLine();
+                move = Convert.ToInt32(read);
+            }
             return move;
         }
 
@@ -32,7 +47,6 @@ namespace Project1_Simplexity
 
             Console.WriteLine("What Shape do you want to play? 1:Cube  2:Cilinder");
             read = Console.ReadLine();
-
             return GetPlayerPiece(read); 
            
 
@@ -43,33 +57,51 @@ namespace Project1_Simplexity
         {
             Piece playerPiece = Piece.None; 
 
+
             switch (read) 
             {
                 case "1":
-                    if (Color == Color.White)
+                    if (CubeNumber == 0)
                     {
-                        playerPiece = Piece.WhiteCube;
+                        playerPiece = GetShape();
                     }
                     else
                     {
-                        playerPiece = Piece.RedCube;
+                        if (Color == Color.White)
+                        {
+                            playerPiece = Piece.WhiteCube;
+                            CubeNumber--;
+                        }
+                        else
+                        {
+                            playerPiece = Piece.RedCube;
+                            CubeNumber--;
+                        }
                     }
                     break;
 
                 case "2":
-                    if (Color == Color.White)
+                    if (CilinderNumber == 0)
                     {
-                        playerPiece = Piece.WhiteCilinder;
+                        playerPiece = GetShape();
                     }
                     else
                     {
-                        playerPiece = Piece.RedCilinder;
+                        if (Color == Color.White)
+                        {
+                            playerPiece = Piece.WhiteCilinder;
+                            CilinderNumber--;
+                        }
+                        else
+                        {
+                            playerPiece = Piece.RedCilinder;
+                            CilinderNumber--;
+                        }
                     }
                     break;
                 default:
-                    GetShape();
-                    break;
-                    
+                    playerPiece = GetShape();
+                    break;                   
                     
             }
             return playerPiece;

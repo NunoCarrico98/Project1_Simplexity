@@ -28,6 +28,12 @@ namespace Project1_Simplexity
             while (piece[checkX,chosenColumn] != Piece.None)
             {
                 checkX--;
+                if(checkX < 0) 
+                {
+                    Player CheckInput = new Player();
+                    chosenColumn = CheckInput.GetColumn() - 1;
+                    checkX = 6;
+                }
             }
 
             piece[checkX, chosenColumn] = newPiece;
