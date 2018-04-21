@@ -12,30 +12,35 @@ namespace Project1_Simplexity
         {
             Board board = new Board();
             Renderer render = new Renderer();
-            Player player = new Player(Color.White);
+            WinChecker winChecker = new WinChecker();
+            Player player1 = new Player(Color.White);
             Player player2 = new Player(Color.Red);
+            Coordinates lastPosPlayed = new Coordinates(0, 0);
 
-            for (int i = 0; i < 50; i++)
-            {   
-                Color color = Color.White;
-                
+            while (!winChecker.CheckDraw(player1, player2) && winChecker.Check(board, lastPosPlayed) == Color.None)
+            {
+                Color color = player1.Color;
+
                 render.Render(board);
- 
-                if (color == Color.White)
+
+                if (color == player1.Color)
                 {
-                    board.SetPiece(player.GetColumn(), player.GetShape());
-                    color = Color.Red;
+                    lastPosPlayed = board.SetPiece(player1.GetColumn(), player1.GetShape());
+                    color = player2.Color;
                 }
 
                 render.Render(board);
 
-                if (color == Color.Red)
+                if (color == player2.Color)
                 {
-                    board.SetPiece(player2.GetColumn(), player2.GetShape());
-                    color = Color.White;
+                    lastPosPlayed = board.SetPiece(player2.GetColumn(), player2.GetShape());
+                    color = player1.Color;
                 }
 
             }
+
+            render.Render(board);
+            render.RenderResults(winChecker.Check(board, lastPosPlayed));
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Project1_Simplexity
             else return Color.None;
         }
 
-        public void SetPiece(int playerMove, Piece newPiece)
+        public Coordinates SetPiece(int playerMove, Piece newPiece)
         {
             int checkX = 6;
             int chosenColumn = playerMove - 1;
@@ -52,6 +52,7 @@ namespace Project1_Simplexity
 
             piece[checkX, chosenColumn] = newPiece;
 
+            return new Coordinates(checkX, chosenColumn);
         }
     }
 }

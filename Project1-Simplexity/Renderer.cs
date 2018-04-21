@@ -51,7 +51,22 @@ namespace Project1_Simplexity
 
             }
             return temp;
+        }
 
+        public void RenderResults(Color winner)
+        {
+            switch (winner)
+            {
+                case Color.White:
+                    Console.WriteLine("Player 1 wins!!!\n");
+                    break;
+                case Color.Red:
+                    Console.WriteLine("Player 2 wins!!!\n");
+                    break;
+                case Color.None:
+                    Console.WriteLine("It's a tie!");
+                    break;
+            }
         }
     }
 }
