@@ -1,7 +1,5 @@
 ﻿# Project 1 - Simplexity 
 
-## Members
-
 * Francisco Freixo - a21701661
 * Nuno Carriço - a21701393
 
@@ -52,6 +50,7 @@
 ### Data structures
 
 For our board we used an array of pieces. These Pieces are represented by a enumertaion containing five different variants.
+
 | Piece         |
 | ------------- |
 | None          |
