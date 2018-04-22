@@ -37,13 +37,13 @@
 
 ### Fluxogram
 
-![Simplexity_Fluxogram_-_Page_1__1_](/uploads/283c999fc0fa3a6c791675c933122de5/Simplexity_Fluxogram_-_Page_1__1_.png)
+![Simplexity_Fluxogram_-_Page_1__1_](https://gitlab.com/NunoCarrico98/Project1_Simplexity/uploads/283c999fc0fa3a6c791675c933122de5/Simplexity_Fluxogram_-_Page_1__1_.png)
 
 **Picture 1** - Our Fluxogram represents the flow of the program, in this case, the Game Loop.
 
 ### UML Diagram
 
-![UML](/uploads/369eb0b6742e245c3478b903b34a2e19/UML.png)
+![UML](https://gitlab.com/NunoCarrico98/Project1_Simplexity/uploads/369eb0b6742e245c3478b903b34a2e19/UML.png)
 
 **Picture 2** - Our UML Diagram shows the structure of our program as well as the relationships between our classes. 
 
