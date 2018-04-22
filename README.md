@@ -50,13 +50,13 @@
 ### Data structures
 
 For our board we used an array of pieces. These Pieces are represented by a enumertaion containing five different variants.
-|Piece|
-|-|
-|None|
-|RedCube|
-|RedCilinder|
-|WhiteCube|
-|WhiteCilinder|
+| Piece         |
+| ------------- |
+| None          |
+| RedCube       |
+| RedCilinder   |
+| WhiteCube     |
+| WhiteCilinder |
 
 ### Algorithms
 
