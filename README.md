@@ -37,7 +37,7 @@
 
 ### Fluxogram
 
-![Simplexity_Fluxogram](/uploads/283c999fc0fa3a6c791675c933122de5/Simplexity_Fluxogram_-_Page_1__1_.png)
+![Simplexity_Fluxogram_-_Page_1__1_](/uploads/283c999fc0fa3a6c791675c933122de5/Simplexity_Fluxogram_-_Page_1__1_.png)
 
 **Picture 1** - Our Fluxogram represents the flow of the program, in this case, the Game Loop.
 
