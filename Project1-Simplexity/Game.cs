@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Project1_Simplexity
 {
+    /// <summary>
+    /// Class that contains the Game Loop.
+    /// </summary>
     class Game
     {
-
+        /// <summary>
+        /// Method that performs the Game Loop.
+        /// </summary>
+        /// <param name="board"> Variable that contains the board </param>
+        /// <param name="render"> Variable that contains the methods to render. </param>
+        /// <returns></returns>
         public Coordinates GameLoop(Board board, Renderer render)
         {
             /* Instantiates new objects for the game */
