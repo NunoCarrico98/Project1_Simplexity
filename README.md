@@ -23,12 +23,12 @@
 **Nuno Carriço:**
 * Fluxogram, UML Diagram and *README*
 * Change Variables to Properties on classes Coordinates and Piece
-* Method GetPiece
+* Method `GetPiece()`
 * Class Player
 * Method that asks for column
-* Method SetPiece
+* Method `SetPiece()`
 * Tie verification
-* Method GetShape and GetColor
+* Method `GetShape()` and `GetColor()`
 * Win verification
 * Class Game - game loop
 * Comments to Program, Coordinates, Board, Game, Renderer and WinChecker classes
@@ -49,7 +49,7 @@
 
 ### Data structures
 
-For our board we used an array of pieces. These Pieces are represented by a enumertaion containing five different variants.
+For our board we used an array of `pieces`. These `pieces` are represented by a enumertaion containing five different variants.
 
 | Piece         |
 | ------------- |
@@ -61,9 +61,9 @@ For our board we used an array of pieces. These Pieces are represented by a enum
 
 ### Algorithms
 
- Our game starts by entering the `GameLoop()` method. This contains all the methods necessary for our game to work (by accesing other classes by instances). As such, the `GameLoop()` method continues until a draw or win is verified by the `WinChecker` Class. 
+ Our game starts by entering the `GameLoop()` method. This contains all the methods necessary for our game to work (by accessing other classes by instances). As such, the `GameLoop()` method continues until a draw or win is verified by the `WinChecker` Class. 
  
-The `GameLoop()` starts by asking for the first player (white) to choose a column and a shape. Then, our program checks the column that the player chose for a space. To verify if our column is full, our program use just an `int` variable that goes through the column, always up. If it ends up being outside the board it means the column is full and new column will be asked.
+The `GameLoop()` starts by asking for the first player (white) to choose a column and a shape. Then, our program checks the column that the player chose for a space. To verify if our column is full, our program uses an `int` variable that goes through the column, always up. If it ends up being outside the board it means the column is full and a new column will be asked.
 
 Here is some pseudocode to better understand the column verification:
 
@@ -76,12 +76,12 @@ Here is some pseudocode to better understand the column verification:
             checkColumn = 6;
 ```
 
-After the `piece` is on the `board`, the win verification starts. First, we check if there victory by `shape` and then by `color`. 
-Our algortihm starts by creating an array of 4 directions and `foreach` direction in that array a counter starts. After, it makes sure to also check the opposite direction to the current verification direction. It sends that direction through a new variable and starts the verification in the `position` of the last piece put on the `board`. It goes through 4 `pieces` for each `direction` and if a equal `piece` is found, it adds to the counter. As such, if the counter is equal or bigger than 4, a win is set and it returns `true` to the `Check()` method, that sends the winner to `RenderResults()`. And the game ends.
+After the `piece` is on the `board`, the win verification starts. First, we check if there is victory by `shape` and then by `color`. 
+Our algortihm starts by creating an array of 4 directions and `foreach` direction in that array a counter starts. Then it makes sure to also check the opposite direction to the current verification direction. It sends that direction through a new variable and starts the verification in the `position` of the last piece placed on the `board`. It goes through 4 `pieces` for each `direction` and if a equal `piece` is found, it adds to the counter. As such, if the counter is equal or bigger than 4, a win is set and it returns `true` to the `Check()` method, that sends the winner to `RenderResults()` and the game ends.
 
 Here is some pseudocode to better understand the win verification:
 ```c#
-Creation an array of 4 directions (North, Northeast, East and Southeast)
+Create an array of 4 directions (North, Northeast, East and Southeast)
 foreach(direction in array)
     Start counter of matching shape or color at 1;
     Cycle for() to make we also check opposite direction;
