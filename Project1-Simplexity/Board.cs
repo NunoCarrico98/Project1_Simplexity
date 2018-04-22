@@ -81,7 +81,7 @@ namespace Project1_Simplexity
         /// player chose. </param>
         /// <param name="newPiece"> Variable that contains the Piece to set 
         /// on board. </param>
-        /// <returns></returns>
+        /// <returns> Returns coordinates of last Piece played </returns>
         public Coordinates SetPiece(int playerMove, Piece newPiece)
         {
             /* Variable to check column */
@@ -111,7 +111,7 @@ namespace Project1_Simplexity
             /* Set on chosen column in available X */
             piece[checkX, chosenColumn] = newPiece;
 
-            /* Calls function to switch turn */
+            /* Calls method to switch turn */
             SwitchTurn();
 
             /* Returns the Coordinates od the Piece */
