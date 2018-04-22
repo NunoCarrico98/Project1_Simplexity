@@ -11,8 +11,14 @@ namespace Project1_Simplexity
     /// </summary>
     class Coordinates
     {
-        /* Property that defines Coordinates (X and Y) */
+        /// <summary>
+        /// Property that defines the Coordinate X.
+        /// </summary>
         public int X { get; }
+
+        /// <summary>
+        /// Property that defines the Coordinate Y.
+        /// </summary>
         public int Y { get; }
 
         /// <summary>

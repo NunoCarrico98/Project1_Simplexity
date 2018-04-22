@@ -11,10 +11,14 @@ namespace Project1_Simplexity
     /// </summary>
     class Board
     {
-        /* Instance Variable that creates board */
+        /// <summary>
+        /// Instance Variable that creates board.
+        /// </summary>
         private Piece[,] piece;
 
-        /* Property that dictates Next Player */
+        /// <summary>
+        /// Property that dictates Next Player.
+        /// </summary>
         public Color NextPlayer { get; private set; }
 
         public Board()

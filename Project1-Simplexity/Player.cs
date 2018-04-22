@@ -11,11 +11,19 @@ namespace Project1_Simplexity
     /// </summary>
     class Player
     {
-        /* Property that defines Player Color */
+        /// <summary>
+        /// Property that defines Player Color.
+        /// </summary>
         public Color Color { get; }
 
-        /* Properties that save Cube and Cilinder numbers */
+        /// <summary>
+        /// Properties that hold Cube.
+        /// </summary>
         public int CubeNumber { get; private set; }
+
+        /// <summary>
+        /// Properties that hold the Cilinder numbers
+        /// </summary>
         public int CilinderNumber { get; private set; }
         
         /// <summary>
