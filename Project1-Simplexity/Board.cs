@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Project1_Simplexity
 {
+    /// <summary>
+    /// Class that manages the board.
+    /// </summary>
     class Board
     {
         /* Instance Variable that creates board */
