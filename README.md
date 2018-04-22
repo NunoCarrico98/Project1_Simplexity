@@ -1,5 +1,7 @@
 ﻿# Project 1 - Simplexity 
 
+## Members
+
 * Francisco Freixo - a21701661
 * Nuno Carriço - a21701393
 
