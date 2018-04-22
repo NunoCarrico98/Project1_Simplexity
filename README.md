@@ -1,7 +1,7 @@
-# Project 1 - Simplexity 
+ï»¿# Project 1 - Simplexity 
 
 * Francisco Freixo - a21701661
-* Nuno Carriço - a21701393
+* Nuno CarriÃ§o - a21701393
 
 ## Who did what?
 
@@ -20,7 +20,7 @@
 * Improve Visualization
 * Comments to Shape, Color, Piece and Player classes
 
-**Nuno Carriço:**
+**Nuno CarriÃ§o:**
 * Fluxogram, UML Diagram and *README*
 * Change Variables to Properties on classes Coordinates and Piece
 * Method GetPiece
