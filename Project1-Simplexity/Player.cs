@@ -42,7 +42,7 @@ namespace Project1_Simplexity
 
             while (move > 7 || move < 1)
             {
-                Console.WriteLine("Invalid Input!");
+                Console.WriteLine(">>>>> Invalid Input! <<<<<");
                 Console.Write("Insert column: ");
                 read = Console.ReadLine();
                 Console.WriteLine();
@@ -57,7 +57,8 @@ namespace Project1_Simplexity
             string read = "";
 
             Console.WriteLine("What shape do you want to play?");
-            Console.WriteLine($"1 - Cube({CubeNumber})\n2 - Cilinder({CilinderNumber})");
+            Console.WriteLine($"1 - Cube({CubeNumber})");
+            Console.WriteLine($"2 - Cilinder({CilinderNumber})");
             Console.Write("Shape: ");
             read = Console.ReadLine();
             Console.WriteLine();
@@ -74,7 +75,7 @@ namespace Project1_Simplexity
                 case "1":
                     if (CubeNumber == 0)
                     {
-                        Console.WriteLine("No Cubes left");
+                        Console.WriteLine(">>>>> No Cubes left <<<<<");
                         playerPiece = GetShape();
                     }
                     else
@@ -94,7 +95,7 @@ namespace Project1_Simplexity
                 case "2":
                     if (CilinderNumber == 0)
                     {
-                        Console.WriteLine("No Cilinders left");
+                        Console.WriteLine(">>>>> No Cilinders left <<<<<");
                         playerPiece = GetShape();
                     }
                     else
@@ -112,7 +113,7 @@ namespace Project1_Simplexity
                     }
                     break;
                 default:
-                    Console.WriteLine("Invalid Input");
+                    Console.WriteLine(">>>>> Invalid Input! <<<<<");
                     playerPiece = GetShape();
                     break;                                       
             }

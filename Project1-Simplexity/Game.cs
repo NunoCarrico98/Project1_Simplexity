@@ -27,7 +27,7 @@ namespace Project1_Simplexity
                 {
                     if (!player1.HavePieces())
                     {
-                        Console.WriteLine("I'm Sorry... You have no more pieces.");
+                        Console.WriteLine(">>>>> No pieces available <<<<<");
                         continue;
                     }
                     Console.WriteLine("White Player, it's your turn!\n");
@@ -39,7 +39,7 @@ namespace Project1_Simplexity
                 {
                     if (!player2.HavePieces())
                     {
-                        Console.WriteLine("I'm Sorry... You have no more pieces.");
+                        Console.WriteLine(">>>>> No pieces available <<<<<");
                         continue;
                     }
                     Console.WriteLine("Red Player, it's your turn!\n");

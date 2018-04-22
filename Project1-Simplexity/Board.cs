@@ -47,6 +47,7 @@ namespace Project1_Simplexity
                 checkX--;
                 if (checkX < 0)
                 {
+                    Console.WriteLine(">>>>> Unavailable Column <<<<<");
                     Player CheckInput = new Player();
                     chosenColumn = CheckInput.GetColumn() - 1;
                     checkX = 6;
