@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Project1_Simplexity
 {
     /// <summary>
-    /// Class that runs the game
+    /// Class that runs the game.
     /// </summary>
     class Program
     {
