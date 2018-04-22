@@ -19,7 +19,7 @@ namespace Project1_Simplexity
         public int CilinderNumber { get; private set; }
         
         /// <summary>
-        /// Constructur Method that instantiates the Player.
+        /// Constructur Method that instantiates a Player.
         /// </summary>
         public Player()
         {
@@ -29,10 +29,10 @@ namespace Project1_Simplexity
         /// Constructor Method that instantiate Players Color, Cube and Cilinder
         /// number. 
         /// </summary>
-        /// <param name="color"> Players Color (White/Red) </param>
+        /// <param name="color"> Variable that contains Player Color (White/Red) </param>
         public Player (Color color)
         {
-            /* Defines number of Cubes and Cilinders for each defined Color */
+            /* Initializes number of Cubes and Cilinders for each defined Color */
             this.Color = color;
             this.CubeNumber = 11;
             this.CilinderNumber = 10;
@@ -98,7 +98,7 @@ namespace Project1_Simplexity
             read = Console.ReadLine();
             Console.WriteLine();
 
-            /* Returns Piece */
+            /* Calls GetPlayerPiece() and Returns Piece */
             return GetPlayerPiece(read); 
         }
 
@@ -119,6 +119,7 @@ namespace Project1_Simplexity
                     /* If Player does not have Cubes */
                     if (CubeNumber == 0)
                     {
+                        /* Asks for a new shape */
                         Console.WriteLine(">>>>> No Cubes left <<<<<");
                         playerPiece = GetShape();
                     }
@@ -128,13 +129,17 @@ namespace Project1_Simplexity
                         /* If Player1 is playing */
                         if (Color == Color.White)
                         {
+                            /* Sets Player Piece to return */
                             playerPiece = Piece.WhiteCube;
+                            /* Decreases to the number of cubes */
                             CubeNumber--;
                         }
                         /* If Player2 is Playing */
                         else
                         {
+                            /* Sets Player Piece to return */
                             playerPiece = Piece.RedCube;
+                            /* Decreases to the number of cubes */
                             CubeNumber--;
                         }
                     }
@@ -144,6 +149,7 @@ namespace Project1_Simplexity
                     /* If Player does not have Cilinders */
                     if (CilinderNumber == 0)
                     {
+                        /* Asks for a new shape */
                         Console.WriteLine(">>>>> No Cilinders left <<<<<");
                         playerPiece = GetShape();
                     }
@@ -153,19 +159,24 @@ namespace Project1_Simplexity
                         /* If Player1 is playing */
                         if (Color == Color.White)
                         {
+                            /* Sets Player Piece to return */
                             playerPiece = Piece.WhiteCilinder;
+                            /* Decreases to the number of cilinders */
                             CilinderNumber--;
                         }
                         /* If player2 is playing */
                         else
                         {
+                            /* Sets Player Piece to return */
                             playerPiece = Piece.RedCilinder;
+                            /* Decreases to the number of cilinders */
                             CilinderNumber--;
                         }
                     }
                     break;
                 /* If input is Invalid */
                 default:
+                    /* Asks for a new shape */
                     Console.WriteLine(">>>>> Invalid Input! <<<<<");
                     playerPiece = GetShape();
                     break;                                       
